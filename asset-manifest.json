@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/adMaster/static/css/main.748d9327.chunk.css",
+    "main.js": "/adMaster/static/js/main.49b750f4.chunk.js",
+    "main.js.map": "/adMaster/static/js/main.49b750f4.chunk.js.map",
+    "runtime-main.js": "/adMaster/static/js/runtime-main.19ca681d.js",
+    "runtime-main.js.map": "/adMaster/static/js/runtime-main.19ca681d.js.map",
+    "static/js/2.43128c1b.chunk.js": "/adMaster/static/js/2.43128c1b.chunk.js",
+    "static/js/2.43128c1b.chunk.js.map": "/adMaster/static/js/2.43128c1b.chunk.js.map",
+    "static/js/3.d55b2459.chunk.js": "/adMaster/static/js/3.d55b2459.chunk.js",
+    "static/js/3.d55b2459.chunk.js.map": "/adMaster/static/js/3.d55b2459.chunk.js.map",
+    "index.html": "/adMaster/index.html",
+    "static/css/main.748d9327.chunk.css.map": "/adMaster/static/css/main.748d9327.chunk.css.map",
+    "static/js/2.43128c1b.chunk.js.LICENSE.txt": "/adMaster/static/js/2.43128c1b.chunk.js.LICENSE.txt",
+    "static/media/friends.png": "/adMaster/static/media/friends.67f0f134.png",
+    "static/media/house.png": "/adMaster/static/media/house.e4ff5b14.png",
+    "static/media/man.png": "/adMaster/static/media/man.b739f321.png",
+    "static/media/money.png": "/adMaster/static/media/money.95da3d6e.png",
+    "static/media/nextHouse.png": "/adMaster/static/media/nextHouse.a149dc9a.png",
+    "static/media/study.png": "/adMaster/static/media/study.3313e277.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.19ca681d.js",
+    "static/js/2.43128c1b.chunk.js",
+    "static/css/main.748d9327.chunk.css",
+    "static/js/main.49b750f4.chunk.js"
+  ]
+}
