@@ -21,7 +21,8 @@ const Layout = () => {
     }, [currentAd]);
     
     return(
-        <Grid>
+        <Grid data-testid="layout">
+            {/* New advertisement adding block */}
             <Drawer 
                 anchor="right" 
                 open={isNewDrawer} 
@@ -31,6 +32,8 @@ const Layout = () => {
                     closeAction={ () => { setIsNewDrawer(false) } }
                 />
             </Drawer>
+
+            {/* Header */}
             <Paper className="headerBlock">
                 <Grid container display="flex" justifyContent="space-between" alignItems="center">
                     <Grid className="appTitle">Classified Ads</Grid>
@@ -39,7 +42,6 @@ const Layout = () => {
                         indicatorColor="primary"
                         // textColor="primary"
                         onChange={ (e, currentTab) => { setTabValue(currentTab); }}
-                        // aria-label="disabled tabs example"
                     >
                         <Tab label="Home" />
                         <Tab label="Favourites" />
@@ -47,6 +49,7 @@ const Layout = () => {
                 </Grid>
             </Paper>
             <Grid className="innerPage">
+                {/* all the advertisement list */}
                 {
                     currentPage === "list" &&
                     <ListView
@@ -56,21 +59,14 @@ const Layout = () => {
                     />
                 }
                 {
+                    // single add - info
                     currentPage === "info" &&
                     <Info
                         ad={currentAd}
                         backClickAction={ () => { setCurrentPage("list"); setCurrentAd({}) } }
                     />
                 }
-
-
             </Grid>
-            {/* <Grid>
-                <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
-                <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
-                    {list(anchor)}
-                </Drawer>
-            </Grid> */}
         </Grid>
 
     );

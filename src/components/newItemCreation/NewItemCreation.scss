@@ -13,5 +13,29 @@
 }
 
 .margin-block{
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
+}
+
+.text-area-class{
+    width: 95%;
+    padding: 10px 10px 10px 10px;
+}
+
+.error-text-area{
+    border: 1px solid red !important;
+}
+
+.save-btn{
+    border-radius: 50px !important;
+}
+
+.upload-text{
+    color: #6202EE;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    cursor: pointer;
+}
+
+.error-upload-text{
+    color: red !important;
 }

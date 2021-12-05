@@ -1,5 +1,4 @@
 import './ListView.scss';
-import { Route } from "react-router-dom";
 import { Grid, Button, Box } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import DropDown from '../common/DropDown';
@@ -9,7 +8,9 @@ import { ChangeAdvertiseList } from '../../actions/ChangeAdvertiseList';
 import { ChangeCategory } from '../../actions/ChangeCategory';
 
 const ListView = (props) => {
+    // redux saving action
     const dispatch = useDispatch();
+    // get data from redux store
     const {categoryList} = useSelector((state) => state);
     const {advertisementList} = useSelector((state) => state);
     const {category} = useSelector((state) => state);    
@@ -26,6 +27,7 @@ const ListView = (props) => {
         setSelectedCategory(category);
     },[]);
 
+    // filtering action
     useEffect(() => {
         let filteredAdList = advertisementList.filter((singleAd) => {
             if((selectedCategory === "all") || (selectedCategory === singleAd.category)){
@@ -80,6 +82,7 @@ const ListView = (props) => {
                     displayAdvertisementList.map((SingleAdvertisementData, SingleAdvertisementDataIndex) => {
                         return(
                             <Grid item className="singleBlock" key={ SingleAdvertisementDataIndex }>
+                                {/*  single component for each ads */}
                                 <SingleAdvertisement 
                                     adDetail={ SingleAdvertisementData }
                                     checkboxChange={ (value, item) => favChangeAction(value, item) }
@@ -90,6 +93,7 @@ const ListView = (props) => {
                     })
                 }
                 {
+                    // error message
                    displayAdvertisementList && displayAdvertisementList.length === 0 &&
                    <Grid container display="flex" justifyContent="center" className="nodata">No Data Found</Grid>
                 }

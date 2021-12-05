@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 
 const DropDown = (props) => {
     return(
-        <FormControl variant="outlined" fullWidth>
+        <FormControl variant="outlined" fullWidth className={ props.mainWrapper }>
             <InputLabel error={props.error} id="demo-simple-select-outlined-label">{ props.label }</InputLabel>
             <Select
-                labelId="demo-simple-select-outlined-label"
+                // labelId="demo-simple-select-outlined-label"
                 id={ props.id }
                 value={ props.selectedCategory }
                 onChange={ (e) => { props.categorySelectionAction(e); } }
@@ -15,9 +15,9 @@ const DropDown = (props) => {
                 
             >
                 {
-                    props.options && props.options.map((singleOption) => {
+                    props.options && props.options.map((singleOption, singleOptionIndex) => {
                         return(
-                            <MenuItem value={ singleOption.id }>{ singleOption.name }</MenuItem>
+                            <MenuItem key={singleOptionIndex} value={ singleOption.id }>{ singleOption.name }</MenuItem>
                         );
                     })
                 }

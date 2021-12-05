@@ -7,8 +7,13 @@
 }
 
 .single-ad-container{
-//    height: 365px;
-}
+    height: 375px;
+    overflow-y: hidden;
+ }
+
+ .small-single-ad-container{
+    height: 330px !important;
+ }
 
 .singleBlock{
     width: 27%;

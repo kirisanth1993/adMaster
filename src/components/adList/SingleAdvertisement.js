@@ -13,14 +13,15 @@ const SingleAdvertisement = (props) => {
     },[adDetail.isFav]);
 
     return(
-        <Paper className={ "single-ad-container" }>
+        <Paper className={ (!infoPage && "single-ad-container ") + (!infoPage && adDetail.isFav && "small-single-ad-container") }>
             <Grid className="fav-img-wrapper">
                 <img 
                     className={ "single-ad-img " + (infoPage && "info-page-single-ad-img")} 
-                    src={ !adDetail.isNew ? require( "../../assets/images/" + adDetail.image).default : adDetail.imgage }
+                    src={ !adDetail.isNew ? require( "../../assets/images/" + adDetail.image).default : adDetail.image }
                     onClick={ () => { !infoPage && itemClickAction(adDetail); } }
                 />
                 {
+                    // fav icon
                     !infoPage &&
                     <Grid className="fav-checkbox">
                         <Checkbox
